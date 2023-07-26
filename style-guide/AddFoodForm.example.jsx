@@ -16,10 +16,10 @@ function AddFoodForm() {
       <Input name="image" value={undefined} type="text" onChange={() => {}} />
 
       <label>Calories</label>
-      {/* render antd <Input /> type="number" here */}
+      <Input calories="number" value={undefined} type="text" onChange={() => {}} />
 
       <label>Servings</label>
-      {/* render antd <Input /> type="number" here */}
+      <Input servings="number" value={undefined} type="text" onChange={() => {}} />
 
       <Button type="submit">Create</Button>
     </form>
