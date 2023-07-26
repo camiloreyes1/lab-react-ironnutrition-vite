@@ -1,12 +1,25 @@
 import { Divider, Input } from "antd";
 import { useState } from "react";
 
-function Search() {
+function Search({ onSearch }) {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleInputChange = (event) => {
+    const newSearchTerm = event.target.value;
+    setSearchTerm(newSearchTerm);
+    onSearch(newSearchTerm);
+  };
+
   return (
     <>
       <Divider>Search</Divider>
-
-      <Input name="search" value={undefined} type="text" onChange={() => {}} />
+      <label>Search</label>
+      <Input
+        name="search"
+        value={searchTerm}
+        type="text"
+        onChange={handleInputChange}
+      />
     </>
   );
 }
