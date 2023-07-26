@@ -2,6 +2,9 @@ import { useState } from "react";
 import FoodBox from "./FoodBox";
 import foodsJson from "../foods.json";
 import AddFoodForm from "./AddFoodForm";
+import Search from "./Search";
+
+
 
 function FoodList() {
     const [allFoods ,setFoodsList] =useState(foodsJson)
@@ -10,11 +13,12 @@ function FoodList() {
         setFoodsList(updatedFood)
     }
 
-    
+
     return (
       <div>
         <h1>LAB | React IronNutrition</h1>
 
+        <Search/>
         <AddFoodForm/>
 
         {allFoods.map((f) => (
